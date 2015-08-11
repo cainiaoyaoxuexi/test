@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- <meta name="viewport" -->
+<!-- 	content="width=device-width,  -->
+<!--                                      initial-scale=1.0,  -->
+<!--                                      maximum-scale=1.0,  -->
+<!--                                      user-scalable=no"> -->
+<title>Test</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="function.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
+<!-- <script src="http://apps.bdimg.com/libs/angular.js/1.2.15/angular.min.js"></script> -->
+</head>
+<body onload="MovePerson()">
+	<div class="container">
+		<div class="header">
+			<h1 class="header">This is a test</h1>
+		</div>
+		<div class="sejour" id="sejour">
+			<div class="title">
+				<h2 class="foot" id= "infoChambre" >Chambres</h2>
+			</div>
+			<div class="chambre" id="chamb1"
+				ondragenter="ChosirChambre('chamb1')">
+				<img src="image/c1.jpg" />
+				<p id="c1">chambre1</p>
+			</div>
+			<div class="chambre" id="chamb2"
+				ondragenter="ChosirChambre('chamb2')">
+				<img src="image/c2.jpg" />
+				<p id="c2">chambre2</p>
+			</div>
+			<div class="chambre" id="chamb3"
+				ondragenter="ChosirChambre('chamb3')">
+				<img src="image/c3.jpg" />
+				<p id="c3">chambre3</p>
+			</div>
+		</div>
+
+		<div class="client" id="client" ondragenter="ResetPerson()">
+			<div class="title">
+				<h2 class="foot" id="infoClient">Clients</h2>
+			</div>
+			<div class="person" id="number1" draggable="true">
+				<img id="img1" src="image/client.PNG" draggable="false"/>
+				<p id="p1"></p>
+			</div>
+
+			<div class="person" id="number2" draggable="true">
+				<img id="img2" src="image/trader.PNG" draggable="false"/>
+				<p id="p2"></p>
+			</div>
+
+			<div class="person" id="number3" draggable="true">
+				<img id="img3" src="image/manager.PNG" draggable="false"/>
+				<p id="p3"></p>
+			</div>
+			<div class="person" id="number4" draggable="true">
+				<img id="img4" src="image/manager.PNG" draggable="false"/>
+				<p id="p4"></p>
+			</div>
+			<div class="person" id="number5" draggable="true">
+				<img id="img5" src="image/manager.PNG" draggable="false"/>
+				<p id="p5"></p>
+			</div>
+			<div class="person" id="number6" draggable="true">
+				<img id="img6" src="image/manager.PNG" draggable="false"/>
+				<p id="p6"></p>
+			</div>
+			<div class="person" id="number7" draggable="true">
+				<img id="img7" src="image/manager.PNG" draggable="false"/>
+				<p id="p7"></p>
+			</div>
+			<div class="person" id="number8" draggable="true">
+				<img id="img8" src="image/manager.PNG" draggable="false"/>
+				<p id="p8"></p>
+			</div>
+			<div class="person" id="number9" draggable="true">
+				<img id="img9" src="image/manager.PNG" draggable="false"/>
+				<p id="p9"></p>
+			</div>
+			<div class="person" id="number10" draggable="true">
+				<img id="img10" src="image/manager.PNG" draggable="false"/>
+				<p id="p10"></p>
+			</div>
+
+		</div>
+		<div class="foot">
+			<h2 class="foot">fin de test</h2>
+		</div>
+	</div>
+
+	<script>
+		var p1 = new Personne("Qiao", "XUE");
+		var p2 = new Personne("Dupont", "ALAIN");
+		var p3 = new Personne("Alex", "DUPOND");
+		var p4 = new Personne("toto", "toto");
+		var p5 = new Personne("riri", "riri");
+		var p6 = new Personne("loulou1", "loulou1");
+		var p7 = new Personne("loulou2", "loulou2");
+		var p8 = new Personne("loulou3", "loulou3");
+		var p9 = new Personne("loulou4", "loulou4");
+		var p10 = new Personne("loulou5", "loulou5");
+		document.getElementById("p1").innerHTML = p1.nomComplet();
+		document.getElementById("p2").innerHTML = p2.nomComplet();
+		document.getElementById("p3").innerHTML = p3.nomComplet();
+		document.getElementById("p4").innerHTML = p4.nomComplet();
+		document.getElementById("p5").innerHTML = p5.nomComplet();
+		document.getElementById("p6").innerHTML = p6.nomComplet();
+		document.getElementById("p7").innerHTML = p7.nomComplet();
+		document.getElementById("p8").innerHTML = p8.nomComplet();
+		document.getElementById("p9").innerHTML = p9.nomComplet();
+		document.getElementById("p10").innerHTML = p10.nomComplet();
+
+		var e1 = new Etudiant("Adrien", "Lourdo", "IGSI");
+		// 		document.getElementById("p2").innerHTML = e1.direBonjour();
+		// 		document.getElementById("p3").innerHTML = e1.direAurevoir();
+		// 		document.write(e1 instanceof Personne);
+
+		var cha1 = new Chambre("101");
+		var cha2 = new Chambre("102");
+		var cha3 = new Chambre("103");
+
+		document.getElementById("c1").innerHTML = cha1.libellé;
+		document.getElementById("c2").innerHTML = cha2.libellé;
+		document.getElementById("c3").innerHTML = cha3.libellé;
+
+		// 		RemovePerson("number10");
+	</script>
+</body>
+</html>
